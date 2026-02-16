@@ -91,7 +91,7 @@ function Home() {
         </a>
 
         <a
-          href="hhttps://github.com/abdullah-git40"
+          href="https://github.com/abdullah-git40"
           target="_blank"
           rel="noopener noreferrer"
         >
