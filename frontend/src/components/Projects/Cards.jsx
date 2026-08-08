@@ -3,14 +3,15 @@ import React from "react";
 function Cards({ title, image, description, tags }) {
   return (
     <div className="
-      bg-gray-600 
+      bg-white/5 backdrop-blur-md 
+      border border-white/10 hover:border-violet-500/40
       w-full max-w-4xl 
       mx-auto
-      rounded-xl 
+      rounded-2xl 
       flex flex-col md:flex-row
       gap-4 md:gap-6
-      shadow-lg hover:shadow-2xl
-      transition p-4
+      shadow-lg hover:shadow-violet-500/10
+      transition duration-300 p-5
     ">
 
       {/* IMAGE (TOP ON MOBILE, RIGHT ON DESKTOP) */}
@@ -50,7 +51,7 @@ function Cards({ title, image, description, tags }) {
           {tags.map((tag, index) => (
             <span
               key={index}
-              className="bg-black text-white text-xs sm:text-sm px-3 py-1 rounded-full font-semibold"
+              className="bg-violet-500/15 text-violet-300 border border-violet-500/30 text-xs sm:text-sm px-3 py-1 rounded-full font-medium"
             >
               {tag}
             </span>

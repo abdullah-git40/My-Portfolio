@@ -7,6 +7,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
 import { motion } from "motion/react";
+import CV from "../../assets/CV.pdf";
 
 function Home() {
   return (
@@ -16,7 +17,7 @@ function Home() {
     >
       {/* PROFILE IMAGE */}
       <motion.div
-        className="rounded-full overflow-hidden border-4 border-white shadow-xl"
+        className="rounded-full overflow-hidden border-4 border-violet-500/40 shadow-xl shadow-violet-500/20"
         initial={{ opacity: 0, y: 50 }}
         whileInView={{
           opacity: 1,
@@ -27,7 +28,7 @@ function Home() {
       >
         <img
           src={pfp}
-          alt="profile"
+          alt="Muhammad Abdullah — Front-End Developer"
           className="
             h-24 w-24 
             sm:h-28 sm:w-28 
@@ -39,6 +40,27 @@ function Home() {
         />
       </motion.div>
 
+      {/* AVAILABILITY BADGE */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1, transition: { delay: 0.35, duration: 0.4 } }}
+        viewport={{ once: false, amount: 0.2 }}
+      >
+        <span className="
+          inline-flex items-center gap-2
+          px-4 py-1.5 rounded-full
+          bg-emerald-500/10 border border-emerald-500/30
+          text-emerald-400 text-xs sm:text-sm font-semibold
+          backdrop-blur-md
+        ">
+          <span className="relative flex h-2 w-2">
+            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+            <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+          </span>
+          Available for opportunities
+        </span>
+      </motion.div>
+
       {/* HERO TEXT */}
       <div
         className="
@@ -48,16 +70,16 @@ function Home() {
         "
       >
         <span className="block">
-          Hi, I'm <span className="text-yellow-400">Abdullah</span>.
+          Hi, I'm <span className="text-violet-400">Abdullah</span>.
         </span>
 
         <span className="block">
-          I'm a developer with <span className="text-blue-400">1+ year</span> of experience.
+          I'm a developer with <span className="text-violet-400">2+ years</span> of experience.
         </span>
 
         <span className="block">
           I enjoy building sites, and my focus is{" "}
-          <span className="text-green-400 font-semibold">React</span>.
+          <span className="text-violet-400 font-semibold">React & Dotnet</span>.
         </span>
       </div>
 
@@ -69,13 +91,13 @@ function Home() {
         "
       >
         <a href="#contact">
-          <button className="p-3 px-7 sm:px-9 rounded-full font-bold bg-gray-600 hover:scale-110 transition">
+          <button className="glass-btn-primary p-3 px-7 sm:px-9 rounded-full font-bold text-white cursor-pointer flex items-center gap-2">
             Contact me <FontAwesomeIcon icon={faArrowRight} />
           </button>
         </a>
 
-        <a href="/CV.pdf" download="Muhammad_Abdullah_CV.pdf">
-          <button className="p-3 px-7 sm:px-9 rounded-full font-bold bg-gray-400 hover:scale-110 transition">
+        <a href={CV} download="Muhammad-Abdullah-CV.pdf">
+          <button className="glass-btn-secondary p-3 px-7 sm:px-9 rounded-full font-bold text-white cursor-pointer flex items-center gap-2">
             My Resume <FontAwesomeIcon icon={faFileArrowDown} />
           </button>
         </a>
@@ -85,7 +107,10 @@ function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="p-3 px-5 rounded-full font-bold bg-gray-400 hover:scale-110 transition">
+          <button
+            aria-label="Visit my LinkedIn profile"
+            className="glass-btn-secondary p-3 px-5 rounded-full font-bold text-white cursor-pointer"
+          >
             <FontAwesomeIcon icon={faLinkedin} />
           </button>
         </a>
@@ -95,16 +120,20 @@ function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <button className="p-3 px-5 rounded-full font-bold bg-gray-400 hover:scale-110 transition">
+          <button
+            aria-label="Visit my GitHub profile"
+            className="glass-btn-secondary p-3 px-5 rounded-full font-bold text-white cursor-pointer"
+          >
             <FontAwesomeIcon icon={faGithub} />
           </button>
         </a>
       </div>
 
       {/* DIVIDER */}
-      <div className="w-1 h-14 sm:h-16 bg-gray-400 rounded-full my-10"></div>
+      <div className="w-1 h-14 sm:h-16 bg-gradient-to-b from-violet-500/50 via-violet-400/20 to-transparent rounded-full my-10"></div>
     </div>
   );
 }
 
 export default Home;
+
