@@ -80,7 +80,7 @@ function ProjectModal({ project, isOpen, onClose }) {
 
               {/* ACTION BUTTONS */}
               <div className="flex flex-wrap gap-3 justify-center md:justify-start">
-                {project.liveUrl ? (
+                {project.liveUrl && !project.isLiveDisabled ? (
                   <a
                     href={project.liveUrl}
                     target="_blank"
@@ -96,10 +96,11 @@ function ProjectModal({ project, isOpen, onClose }) {
                   <button
                     disabled
                     aria-disabled="true"
-                    className="glass-btn-secondary opacity-50 cursor-not-allowed w-full sm:w-auto px-6 py-3 rounded-full text-gray-400 font-semibold flex items-center justify-center gap-2 border-white/10"
+                    title="Website is currently unavailable"
+                    className="glass-btn-primary opacity-40 cursor-not-allowed w-full sm:w-auto px-6 py-3 rounded-full text-white/70 font-bold flex items-center justify-center gap-2 pointer-events-none filter grayscale-[30%]"
                   >
                     Visit Website{" "}
-                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="text-sm" />
+                    <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="text-sm opacity-60" />
                   </button>
                 )}
 

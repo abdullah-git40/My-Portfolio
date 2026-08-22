@@ -9,15 +9,6 @@ function Projects() {
 
   const cardsData = [
     {
-      id: 1,
-      title: "🪶NodeNest",
-      description: "A modern blog platform where users can read, write, and share blogs. Admins manage categories and oversee user posts.",
-      image: image1,
-      tags: ["React", "MongoDB", "Node.js"],
-      liveUrl: null,
-      githubUrl: "https://github.com/abdullah-git40",
-    },
-    {
       id: 2,
       title: "E-commerce",
       description: "An e-commerce platform with product listings, cart, authentication, and secure checkout functionality.",
@@ -25,6 +16,16 @@ function Projects() {
       tags: ["React", "MongoDB", "Node.js"],
       liveUrl: "http://ec2-13-53-36-107.eu-north-1.compute.amazonaws.com/",
       githubUrl: "https://github.com/abdullah-git40/E-commerce.git",
+    },
+    {
+      id: 1,
+      title: "🪶NodeNest",
+      description: "A modern blog platform where users can read, write, and share blogs. Admins manage categories and oversee user posts.",
+      image: image1,
+      tags: ["React", "MongoDB", "Node.js"],
+      liveUrl: null,
+      isLiveDisabled: true,
+      githubUrl: "https://github.com/abdullah-git40",
     },
   ];
 
