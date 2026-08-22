@@ -15,7 +15,8 @@ function Projects() {
       image: image2,
       tags: ["React", "MongoDB", "Node.js"],
       liveUrl: "http://ec2-13-53-36-107.eu-north-1.compute.amazonaws.com/",
-      githubUrl: "https://github.com/abdullah-git40/E-commerce.git",
+      githubUrl: null,
+      isPrivateSource: true,
     },
     {
       id: 1,
