@@ -14,8 +14,8 @@ function Projects() {
       description: "A modern blog platform where users can read, write, and share blogs. Admins manage categories and oversee user posts.",
       image: image1,
       tags: ["React", "MongoDB", "Node.js"],
-      liveUrl: "",
-      githubUrl: "https://github.com/abdullah-git40/Blog.git",
+      liveUrl: null,
+      githubUrl: "https://github.com/abdullah-git40",
     },
     {
       id: 2,
